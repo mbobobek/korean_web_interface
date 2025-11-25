@@ -1,0 +1,84 @@
+{
+  "name": "korean-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run build:css && node server.js",
+    "build": "npm run build:css",
+    "dev": "npx tailwindcss -i ./styles/main.css -o ./styles/output.css --watch",
+    "build:css": "npx tailwindcss -i ./styles/main.css -o ./styles/output.css --minify",
+    "lint": "npx eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "npx eslint \"src/**/*.{js,jsx}\" --fix"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "doctrine": "^2.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "esutils": "^2.0.3",
+    "object-keys": "^1.1.1",
+    "postcss": "^8.4.47",
+    "prelude-ls": "^1.2.1",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.16"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": "latest"
+    },
+    "plugins": [
+      "import",
+      "jsx-a11y",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": false,
+          "printWidth": 120
+        }
+      ],
+      "import/order": [
+        "warn",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "newlines-between": "always"
+        }
+      ],
+      "no-unused-vars": [
+        "warn",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "printWidth": 120
+  }
+}

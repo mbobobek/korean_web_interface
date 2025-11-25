@@ -1,0 +1,2 @@
+/* build artefakti: npx tailwindcss -i ./styles/main.css -o ./styles/output.css --minify */
+@import "./main.css";

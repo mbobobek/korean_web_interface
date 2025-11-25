@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korean Flashcards</title>
+  <link rel="stylesheet" href="./styles/output.css" />
+</head>
+<body class="app-body">
+  <div class="bg-gradient"></div>
+  <div class="bg-glow"></div>
+
+  <div id="topbar-root"></div>
+  <main id="screen-root"></main>
+
+  <script>
+    window.QUIZ_SOCKET_URL = "https://socketserver-production-fd7c.up.railway.app";
+    // HanDo AI backend URL (change to your deployed host)
+    window.HANDO_AI_URL = window.HANDO_AI_URL || "http://localhost:5050";
+  </script>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
