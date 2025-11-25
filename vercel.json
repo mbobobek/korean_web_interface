@@ -1,13 +1,5 @@
 {
   "version": 2,
   "buildCommand": "npm run build:css",
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "styles/**", "use": "@vercel/static" },
-    { "src": "src/**", "use": "@vercel/static" },
-    { "src": "assets/**", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "outputDirectory": "."
 }
