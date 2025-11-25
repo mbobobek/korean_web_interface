@@ -16,7 +16,6 @@ import {
   showLiveQuiz,
   showLiveHost,
   showLiveJoin,
-  showTutor,
   showAi,
 } from "./router.js";
 
@@ -131,21 +130,11 @@ const liveJoinProps = {
   onBack: () => showLiveQuiz(screenRoot, liveMenuProps),
 };
 
-function tutorProps() {
-  return {
-    book: store.book,
-    gwa: store.gwa,
-    words: store.words,
-    onBack: () => showHome(screenRoot, homeProps),
-  };
-}
-
 const homeProps = {
   onFlash: () => showBookSelect(screenRoot, flashBookProps),
   onTypeCheck: () => showBookSelect(screenRoot, typeBookProps),
   onTest: () => showBookSelect(screenRoot, testBookProps),
   onLiveQuiz: () => showLiveQuiz(screenRoot, liveMenuProps),
-  onTutor: () => showTutor(screenRoot, tutorProps()),
   onAi: () =>
     showAi(screenRoot, {
       onBack: () => showHome(screenRoot, homeProps),

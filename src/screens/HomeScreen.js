@@ -1,4 +1,4 @@
-export function HomeScreen({ onFlash, onTypeCheck, onTest, onLiveQuiz, onTutor, onAi }) {
+export function HomeScreen({ onFlash, onTypeCheck, onTest, onLiveQuiz, onAi }) {
   const root = document.createElement("div");
   root.className = "screen";
 
@@ -17,11 +17,8 @@ export function HomeScreen({ onFlash, onTypeCheck, onTest, onLiveQuiz, onTutor, 
       <button class="pill mode-card" id="liveBtn" style="background:linear-gradient(135deg,#e0f7fa,#80deea);">
         Live Quiz (Socket)
       </button>
-      <button class="pill mode-card" id="tutorBtn" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">
-        HanDo AI
-      </button>
       <button class="pill mode-card" id="aiBtn" style="background:linear-gradient(135deg,#e3f2fd,#c5d8ff);">
-        AI Chat
+        HanDoAI Chat
       </button>
     </div>
   `;
@@ -30,7 +27,6 @@ export function HomeScreen({ onFlash, onTypeCheck, onTest, onLiveQuiz, onTutor, 
   root.querySelector("#typeBtn").onclick = onTypeCheck;
   root.querySelector("#testBtn").onclick = onTest;
   root.querySelector("#liveBtn").onclick = onLiveQuiz;
-  root.querySelector("#tutorBtn").onclick = onTutor;
   root.querySelector("#aiBtn").onclick = onAi;
 
   return root;

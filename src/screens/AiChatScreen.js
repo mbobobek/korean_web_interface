@@ -5,7 +5,7 @@ import { ChatHeader } from "../components/ChatHeader.js";
 
 export default function AiChatScreen({ onBack } = {}) {
   const state = {
-    messages: [{ role: "assistant", text: "HanDo AI: Koreys tiliga oid savolingizni kutyapman!" }],
+    messages: [{ role: "assistant", text: "HanDoAI: Koreys tiliga oid savolingizni kutyapman!" }],
     loading: false,
   };
 
@@ -29,7 +29,7 @@ export default function AiChatScreen({ onBack } = {}) {
     setLoading(true);
     try {
       const reply = await askAI(text);
-      appendBotMessage(reply || "Botdan javob olmadik.");
+      appendBotMessage(reply || "HanDoAI javobida muammo bo'ldi.");
     } catch (err) {
       appendBotMessage("AI serverga ulanishda xatolik. Keyinroq urinib ko'ring.");
       // eslint-disable-next-line no-console

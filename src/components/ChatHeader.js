@@ -5,7 +5,7 @@ export function ChatHeader({ onBack }) {
 
   const left = document.createElement("div");
   left.className = "text-lg font-semibold";
-  left.innerText = "HanDo AI Tutor";
+  left.innerText = "HanDoAI Chat";
 
   const right = document.createElement("div");
   right.className = "flex items-center gap-2";

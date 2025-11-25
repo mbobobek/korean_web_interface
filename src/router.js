@@ -12,7 +12,6 @@ import { TestScreen } from "./screens/TestScreen.js";
 import { LiveQuizMenu } from "./screens/LiveQuizMenu.js";
 import { LiveHostScreen } from "./screens/LiveHostScreen.js";
 import { LiveJoinScreen } from "./screens/LiveJoinScreen.js";
-import { TutorScreen } from "./screens/TutorScreen.js";
 import AiChatScreen from "./screens/AiChatScreen.js";
 import LessonsScreen from "./screens/LessonsScreen.js";
 import StudyScreen from "./screens/StudyScreen.js";
@@ -21,7 +20,6 @@ export const routes = {
   "/": HomeScreen,
   "/lessons": LessonsScreen,
   "/study": StudyScreen,
-  "/tutor": TutorScreen,
   "/ai": AiChatScreen,
 };
 
@@ -93,11 +91,6 @@ export function showLiveJoin(root, props) {
 export function showBookSelect(root, props) {
   root.innerHTML = "";
   root.appendChild(BookScreen(props));
-}
-
-export function showTutor(root, props) {
-  root.innerHTML = "";
-  root.appendChild(TutorScreen(props));
 }
 
 export function showAi(root, props) {
