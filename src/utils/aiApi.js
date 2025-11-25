@@ -9,7 +9,7 @@ export async function askAI(text) {
     body: JSON.stringify({ message: text }),
   });
 
-  if (!response.ok) throw new Error("AI server error");
-  const data = await response.json();
-  return data.reply;
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data?.error || "AI server error");
+  return data.reply || data.answer || "HanDoAI javob bermadi.";
 }
