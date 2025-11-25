@@ -2,7 +2,8 @@
 import { io } from "https://cdn.socket.io/4.7.5/socket.io.esm.min.js";
 
 const DEFAULT_URL =
-  (typeof window !== "undefined" && (window.QUIZ_SOCKET_URL || window.QUIZ_SOCKET_ENDPOINT)) || "http://localhost:3000";
+  (typeof window !== "undefined" && (window.QUIZ_SOCKET_URL || window.QUIZ_SOCKET_ENDPOINT)) ||
+  "https://socketserver-production-fd7c.up.railway.app";
 
 export function createSocket(url = DEFAULT_URL, opts = {}) {
   return io(url, {
