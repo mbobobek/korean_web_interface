@@ -6,7 +6,7 @@ export async function askAI(text) {
   const response = await fetch(`${AI_BASE}/api/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt: text }),
+    body: JSON.stringify({ message: text }),
   });
 
   const data = await response.json().catch(() => ({}));
