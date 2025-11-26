@@ -1,6 +1,6 @@
 const AI_BASE =
   (typeof window !== "undefined" && window.HANDO_AI_URL) ||
-  "https://handoaiserver-production.up.railway.app";
+  "https://ai-server-production-9280.up.railway.app";
 
 export async function askAI(text) {
   const response = await fetch(`${AI_BASE}/api/chat`, {
